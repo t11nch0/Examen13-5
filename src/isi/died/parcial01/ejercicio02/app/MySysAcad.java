@@ -1,5 +1,6 @@
 package isi.died.parcial01.ejercicio02.app;
 
+import isi.died.parcial01.ejercicio02.db.NoPoseeIncripcionRegularException;
 import isi.died.parcial01.ejercicio02.dominio.*;
 
 
@@ -18,7 +19,7 @@ public interface MySysAcad {
 	 * asigna la inscripcion a la lista de inscripciones del alumno, 
 	 * de la materia y del docente
 	 */
-	public void inscribirAlumnoCursada(Docente d,Alumno a, Materia m,Integer cicloLectivo);
+	public void inscribirAlumnoCursada(Docente d,Alumno a, Materia m,Integer cicloLectivo) throws NoPoseeIncripcionRegularException;
 
 	/**
 	 * crea una nueva instancia de Inscripcion y 
