@@ -3,6 +3,7 @@ package isi.died.parcial01.ejercicio02.app;
 import isi.died.parcial01.ejercicio02.db.NoPoseeIncripcionRegularException;
 import isi.died.parcial01.ejercicio02.dominio.*;
 
+import java.util.List;
 
 
 public interface MySysAcad {
@@ -27,6 +28,8 @@ public interface MySysAcad {
 	 * de la materia y del docente
 	 */
 	public void inscribirAlumnoExamen(Docente d,Alumno a, Materia m);
+
+	public List<Examen> topNExamenes(Alumno a, Integer nota, Integer n);
 	
 
 }

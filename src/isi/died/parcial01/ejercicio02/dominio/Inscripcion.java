@@ -7,6 +7,7 @@ public class Inscripcion {
 	private static Integer ID_GENERATOR=0;
 
 	public enum Estado {REGULAR,LIBRE,CURSANDO,PROMOCIONADO};
+
 	private Integer id;
 	private Alumno inscripto;
 	private Materia materia;

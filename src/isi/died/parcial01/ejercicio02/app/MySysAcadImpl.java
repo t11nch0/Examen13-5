@@ -1,6 +1,7 @@
 package isi.died.parcial01.ejercicio02.app;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import isi.died.parcial01.ejercicio02.db.BaseDeDatos;
@@ -62,13 +63,20 @@ public class MySysAcadImpl implements MySysAcad {
 		// DB.guardar(e);
 	}
 
-/*public void registrarNota(Integer nota, Examen e){
+	@Override
+	public List<Examen> topNExamenes(Alumno a, Integer nota, Integer n) {
+		//a.getExamenes().stream().filter((variable)-> variable.getNota()>=nota).sorted(Comparator.comparing(Examen::getNota)).collect;
+		return null;
+	}
+
+	public void registrarNota(Integer nota, Examen e){
 		e.setNota(nota);
 		if(nota>=6){
-			e.getAlumno().
+			Inscripcion nuevo= e.getAlumno().getMateriasCursadas().stream().max(Comparator.comparing(Inscripcion::getCicloLectivo)).get();
+			nuevo.setEstado(Inscripcion.Estado.PROMOCIONADO);
 		}
 
 
 	}
-*/
+
 }
